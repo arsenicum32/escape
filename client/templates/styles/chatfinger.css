@@ -1,0 +1,93 @@
+.dialogbox {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+.dialogbox.me {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+.dialogbox.me .dialogleft {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+  -webkit-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+  background: #ddd;
+}
+.dialogleft {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  background: #ccc;
+  color: #000;
+  width: 60%;
+  min-height: 80px;
+  margin-top: 12px;
+}
+.dialogleft .timedialog {
+  opacity: 0.7;
+  height: 100%;
+  font-size: 0.3em;
+}
+.dialogleft .content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+}
+.dialogleft.newmes {
+  border-width: 3px;
+  border-style: solid;
+  -webkit-border-image: -webkit-linear-gradient(right, #ff0 0%, #0ff 11.46%, #ff0eef 30.88%, #fbb03b 49.48%, #662d91 68.71%, #000 100%) 100% 1;
+       -o-border-image: linear-gradient(right, #ff0 0%, #0ff 11.46%, #ff0eef 30.88%, #fbb03b 49.48%, #662d91 68.71%, #000 100%) 100% 1;
+          border-image: linear-gradient(right, #ff0 0%, #0ff 11.46%, #ff0eef 30.88%, #fbb03b 49.48%, #662d91 68.71%, #000 100%) 100% 1;
+}
+.rightdialog {
+  margin-top: 12px;
+  width: 15%;
+  background: #ccc;
+  border-top-right-radius: 40px 50%;
+  border-bottom-right-radius: 40px 50%;
+}
+.rightdialog.me {
+  background: #ddd;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 40px 50%;
+  border-bottom-left-radius: 40px 50%;
+}
+.rightdialog.me.newmes {
+  border: 3px solid #000;
+  border-right: none;
+}
+.rightdialog.newmes {
+  border: 3px solid #ff0;
+  border-left: none;
+}

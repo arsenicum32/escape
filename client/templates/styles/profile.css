@@ -1,0 +1,32 @@
+.profileInputs{
+  position: absolute;
+  top: 57vh;
+  left: calc(50vw - 18vh);
+  width: 40vh;
+}
+.profileInputs input{
+  background: none;
+  border: none;
+  font-size: 1.8em;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: lighter;
+  text-overflow: none;
+}
+.profileInputs .sml{
+  font-size: 0.8em;
+  margin-top: 2em;
+}
+.profileInputs .ava{
+  font-size: 0.5em;
+  margin-top: 3em;
+}
+.profile-ava{
+  position: absolute;
+  top: 130px;
+  left: calc(50vw - 100px);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: white;
+}

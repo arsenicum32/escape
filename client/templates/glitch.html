@@ -1,0 +1,75 @@
+<template name='glitch'>
+  <div class="glitch g" id='g' data-text="escape">escape</div>
+  <div style='width: 100vw; height: 100vh; background: black'></div>
+  <audio src='/sound.mp3' id='scary' autoplay></audio>
+  <script>
+   $(document).ready(function(){
+     (function() {
+  var next, set;
+
+  $("<style type='text/css' id='dynamic' />").appendTo("body");
+
+  set = function(text, nohting) {
+    var a, go, inter;
+    a = 0;
+    go = function(t) {
+      $('.g').html(t);
+      $('.g').attr('data-text', t);
+      $('#dynamic').text('.glitch:after{ content: ' + t + ';} .glitch:before{ content: ' + t + ' ;}');
+    };
+    if (nohting) {
+      go(text.slice(0, -2));
+    }
+    if (!nohting) {
+      inter = setInterval(function() {
+        a += 1;
+        if (a % 2) {
+          text = text + '|';
+        } else {
+          text = text.slice(0, -1);
+        }
+        go(text);
+        if (a > 3) {
+          clearInterval(inter);
+        }
+      }, 120);
+    }
+  };
+
+  next = function(text, callback) {
+    var inter, st, tm;
+    tm = 0;
+    st = text;
+    return inter = setInterval(function() {
+      if (tm < st.length) {
+        tm += 1;
+      }
+      set(st.substring(0, tm));
+      console.log(st.substring(0, tm));
+      if (tm >= st.length) {
+        clearInterval(inter);
+        set(st, 1);
+        return setTimeout(function() {
+          if (callback) {
+            return callback();
+          }
+        }, 1250);
+      }
+    }, 140);
+  };
+
+  next('привет', function() {
+    next( 'как ты там?))', function() {
+      next('помнишь меня??', function(){
+        document.getElementById('scary').currentTime = 3;
+        setTimeout(function(){
+           window.history.back();
+        }, 90);
+      });
+    });
+  });
+
+}).call(this);
+   });
+  </script>
+</template>

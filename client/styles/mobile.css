@@ -1,0 +1,10 @@
+html {
+  -webkit-text-size-adjust: none;
+  min-height: 100%;
+}
+
+body {
+  height: 100%;
+  position: absolute;
+  width: 100%;
+}

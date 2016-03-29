@@ -1,0 +1,4 @@
+yandex.ru
+main.ru
+dev.ru
+gi.ru

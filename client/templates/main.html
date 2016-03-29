@@ -1,0 +1,15 @@
+<Template name='main'>
+  {{#if mobile}}
+    <div class="full">
+      {{>Template.dynamic template=content}}
+    </div>
+  {{else}}
+    <div class="env">
+      <img src='/left.png' class="ph" />
+      <div class="screen">
+        {{>Template.dynamic template=content}}
+      </div>
+      <img src='/right.png' class="ph" />
+    </div>
+  {{/if}}
+</Template>

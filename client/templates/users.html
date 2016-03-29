@@ -1,0 +1,63 @@
+<template name="users">
+  <div class="{{mobile}}">
+    <input id='searchIn' placeholder="search by username" value='{{lastin}}' />
+    <div id='Allusers'>
+    {{#each users}}
+      <div class="finger gochat" userid='{{this._id}}'>
+        <div class="left {{this.read}}" userid='{{this._id}}'>
+          <div class="time" userid='{{this._id}}'>{{this.online}}</div>
+          <div class="sometext" userid='{{this._id}}'>
+            <div class="name" userid='{{this._id}}' style="{{this.namestyle}}">{{this.username}}</div>
+            <div class="text" userid='{{this._id}}'>{{this.content}}</div>
+          </div><img src="{{this.ava}}" class="photo" userid='{{this._id}}' />
+        </div>
+        <div class="right {{this.read}}" userid='{{this._id}}'></div>
+     </div>
+    {{/each}}
+  </div>
+    <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 750 1334" enable-background="new 0 0 750 1334" xml:space="preserve">
+      <g id="backgroung">
+      	<rect fill="#333333" width="750" height="1334"/>
+      </g>
+      <g id="menu">
+      	<path d="M750,164.2c0-47.5-32.6-85.9-72.9-85.9H72.9C32.6,78.3,0,116.8,0,164.2v30.6h0v1145.4h750V302.4h0V164.2z"/>
+      </g>
+      <!-- <g id="Search_by_name">
+      	<rect x="186.9" y="324.6" fill="none" width="496.1" height="44.7"/>
+      	<text transform="matrix(1 0 0 1 186.8792 355.4009)" fill="#666666" font-family="'Circe-Light'" font-size="44">Search by name/number...</text>
+      </g> -->
+      <g id="icon">
+      	<g>
+      		<g>
+      			<g>
+      				<linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="166.2482" y1="363.9957" x2="147.9077" y2="363.9957">
+      					<stop  offset="0" style="stop-color:#FFFF00"/>
+      					<stop  offset="0.2639" style="stop-color:#00FFFF"/>
+      					<stop  offset="0.4874" style="stop-color:#FF0EEF"/>
+      					<stop  offset="0.7147" style="stop-color:#FBB03B"/>
+      					<stop  offset="0.9142" style="stop-color:#662D91"/>
+      				</linearGradient>
+      				<path fill="url(#SVGID_2_)" d="M146.5,357.7c5.6,5.6,11.3,11.3,16.9,16.9c2.7,2.7,7-1.5,4.2-4.2c-5.6-5.6-11.3-11.3-16.9-16.9
+      					C148,350.7,143.8,354.9,146.5,357.7L146.5,357.7z"/>
+      			</g>
+      		</g>
+      		<g>
+      			<g>
+      				<linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="108" y1="340.9351" x2="155" y2="340.9351">
+      					<stop  offset="0" style="stop-color:#FFFF00"/>
+      					<stop  offset="0.2639" style="stop-color:#00FFFF"/>
+      					<stop  offset="0.4874" style="stop-color:#FF0EEF"/>
+      					<stop  offset="0.7147" style="stop-color:#FBB03B"/>
+      					<stop  offset="0.9142" style="stop-color:#662D91"/>
+      				</linearGradient>
+      				<path fill="url(#SVGID_3_)" d="M151,340.9c-0.3,10.9-8.6,19.2-19.5,19.5c-10.9,0.3-19.2-9.1-19.5-19.5
+      					c-0.3-10.9,9.1-19.2,19.5-19.5C142.4,321.1,150.7,330.6,151,340.9c0.1,3.9,6.1,3.9,6,0c-0.4-14.2-11.3-25.1-25.5-25.5
+      					c-14.2-0.4-25.1,12-25.5,25.5c-0.4,14.2,12,25.1,25.5,25.5c14.2,0.4,25.1-12,25.5-25.5C157.1,337.1,151.1,337.1,151,340.9z"/>
+      			</g>
+      		</g>
+      	</g>
+      </g>
+      </svg>
+  </div>
+</template>

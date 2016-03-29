@@ -1,0 +1,65 @@
+.finger {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+.left {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-align-content: center;
+      -ms-flex-line-pack: center;
+          align-content: center;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  color: #fff;
+  width: 80%;
+  height: 80px;
+}
+.left .time {
+  opacity: 0.7;
+  font-size: 0.4em;
+  margin-top: 25px;
+}
+.left .name {
+  margin-top: 10px;
+}
+.left .text {
+  font-size: 0.6em;
+}
+.left .photo {
+  -webkit-flex-shrink: 0;
+      -ms-flex-negative: 0;
+          flex-shrink: 0;
+  -webkit-transform: translate(50%, 5px);
+          transform: translate(50%, 5px);
+  width: 70px;
+  height: 70px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+.left.newmes {
+  background: #000;
+  border-width: 1px;
+  border-style: solid;
+  -webkit-border-image: -webkit-linear-gradient(right, #ff0 0%, #0ff 11.46%, #ff0eef 30.88%, #fbb03b 49.48%, #662d91 68.71%, #000 100%) 100% 1;
+       -o-border-image: linear-gradient(right, #ff0 0%, #0ff 11.46%, #ff0eef 30.88%, #fbb03b 49.48%, #662d91 68.71%, #000 100%) 100% 1;
+          border-image: linear-gradient(right, #ff0 0%, #0ff 11.46%, #ff0eef 30.88%, #fbb03b 49.48%, #662d91 68.71%, #000 100%) 100% 1;
+}
+.right {
+  width: 15%;
+  border-top-right-radius: 40px 50%;
+  border-bottom-right-radius: 40px 50%;
+}
+.right.newmes {
+  background: #000;
+  border: 1px solid #ff0;
+  border-left: none;
+}

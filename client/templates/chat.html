@@ -1,0 +1,38 @@
+<template name='chat'>
+  <div class="{{mobile}} chatbackrg">
+    <div id='headerChat' >
+      <a href='#' id='todialog' class="back">⬅︎</a>
+      <a href='#' id='seeP' class="name">{{name.username}}</a>
+      <img src="{{name.ava}}" class="ava" />
+      <!-- <p>write {{send}}</p> -->
+    </div>
+    <div class="chat" id='chat'>
+      {{#each message}}
+      <div class="dialogbox {{this.d}}">
+        <div class="dialogleft {{this.d}} {{this.read}}">
+          <div class="timedialog">{{this.time}}</div>
+          <div class="content">
+            <p>{{this.content}}</p>
+          </div>
+        </div>
+        <div class="rightdialog {{this.d}} {{this.read}}">{{> newmes}}</div>
+      </div>
+      {{/each}}
+    </div>
+    {{#if send}}
+      <div class="dialogbox">
+        <div class="dialogleft newmes">
+          <div class="timedialog">now</div>
+          <div class="content">
+            <p>{{send}}</p>
+          </div>
+        </div>
+        <div class="rightdialog newmes"></div>
+      </div>
+    {{/if}}
+    <div class="bottompanel">
+      <textarea id='message'></textarea>
+      <!-- <a href='#' id='send'>отправить</a> -->
+    </div>
+  </div>
+</template>
