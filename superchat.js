@@ -39,12 +39,12 @@ if (Meteor.isServer) {
   Meteor.startup(function () {
     // code to run on server at startup
     console.log( Meteor.default_server.stream_server.open_sockets.length );
-    if(She.find().fetch() === []){
-      console.log('she words is empty');
-      for(var n in shespeak){
-        She.insert(shespeak[n]);
-      }
-    }
+    // if(She.find().fetch() === []){
+    //   console.log('she words is empty');
+    //   for(var n in shespeak){
+    //     She.insert(shespeak[n]);
+    //   }
+    // }
     if(Users.find().fetch() === []){
       console.log('no users - create she');
       Users.insert({

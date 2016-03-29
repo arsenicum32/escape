@@ -1,4 +1,4 @@
-shespeak = [
+var shespeak = [
 	{
 		"step": 1,
 		"message": [
