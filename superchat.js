@@ -45,15 +45,15 @@ if (Meteor.isServer) {
     //     She.insert(shespeak[n]);
     //   }
     // }
-    if(Users.find().fetch() === []){
-      console.log('no users - create she');
-      Users.insert({
-        username: "Она",
-        phone: "89164835827",
-        about: "немножко странная",
-        ava: "/she.png"
-      });
-    }
+    // if(Users.find().fetch() === []){
+    //   console.log('no users - create she');
+    //   Users.insert({
+    //     username: "Она",
+    //     phone: "89164835827",
+    //     about: "немножко странная",
+    //     ava: "/she.png"
+    //   });
+    // }
   });
   Meteor.onConnection(function(client){
     Meteor.call('connect', client.id, client.clientAddress, client.httpHeaders );
