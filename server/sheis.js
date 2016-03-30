@@ -215,4 +215,4 @@ var shespeak = [
 		],
 		"action": "last"
 	}
-]
+];
